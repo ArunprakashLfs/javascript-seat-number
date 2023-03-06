@@ -16,6 +16,8 @@
     --clr-blue: #3E54AC;
     --clr-violet: #655DBB;
     --clr-light-violet:#BFACE2;
+    --clr-occupied: #F7C04A;
+    --clr-selected: #E8D5C4;
   --ff-roboto: 'Roboto', sans-serif;
   --ff-noto-sans: 'Noto Sans', sans-serif;
   --transition: all 0.3s linear;
@@ -138,8 +140,8 @@ body{
 }
 .seat{
     background-color: var(--clr-light-violet);
-    border-top-right-radius:0.5rem ;
-    border-top-left-radius: 0.5rem;
+    border-top-right-radius:0.3rem ;
+    border-top-left-radius: 0.3rem;
     width: 1.5rem;
     height: 1rem;
 }
@@ -153,5 +155,10 @@ body{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
+}
+.Occupied{
+    background-color: var(--clr-occupied);
+}
+.selected{
+    background-color: var(--clr-selected);
 }
