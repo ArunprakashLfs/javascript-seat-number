@@ -12,6 +12,10 @@
 }
 
 :root {
+    --clr-white-blue: #ECF2FF;
+    --clr-blue: #3E54AC;
+    --clr-violet: #655DBB;
+    --clr-light-violet:#BFACE2;
   --ff-roboto: 'Roboto', sans-serif;
   --ff-noto-sans: 'Noto Sans', sans-serif;
   --transition: all 0.3s linear;
@@ -100,4 +104,7 @@ p {
   .section {
     width: 95vw;
   }
+}
+body{
+    background-color: var();
 }
