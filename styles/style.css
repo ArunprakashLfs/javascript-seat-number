@@ -106,5 +106,24 @@ p {
   }
 }
 body{
-    background-color: var();
+    background-color: var(--clr-blue);
+    color: azure;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card{
+    text-align: center;
+    background-color: #655DBB;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
 }
