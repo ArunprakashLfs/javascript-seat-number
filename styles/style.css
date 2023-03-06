@@ -125,5 +125,33 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
+}
+.legend-container{
+    display: flex;
+    gap: 1rem;
+}
+.screen{
+    background-color: white;
+    width: 22rem;
+    height: 8rem;
+}
+.seat{
+    background-color: var(--clr-light-violet);
+    border-top-right-radius:0.5rem ;
+    border-top-left-radius: 0.5rem;
+    width: 1.5rem;
+    height: 1rem;
+}
+.seats-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.row{
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
 }
