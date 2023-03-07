@@ -1,34 +1,48 @@
 'use strict'
-//geting input from html
+//elements
 
-const movieEl = document.getElementById("movie");
-const seatEl = document.querySelectorAll(".row.seat:not(.Occupied)");
-const countEl = document.getElementById("select");
+const movie = document.getElementById("movie");
+const seats = document.querySelectorAll(".row .seat:not(.booked)");
 const total = document.getElementById("total");
+const counts = document.getElementById("select"); //when we use queryselector only it gives 1st element only if we use queryselecterAll it give all elements in node list
 
-//functions
+
+
+//global variables
+
 let ticketPrice = 0;
-let TotalCount = 0;
-//updateCount
-function updateCount() {
-    let TotalCount = document.querySelectorAll("row.selected");
-    let ticketPrice = TotalCount.value;
-    let selectedSeatsCount = TotalCount.length;
-    countEl.innerText = selectedSeatsCount;
-    total.innerText = selectedSeatsCount * ticketPrice;
+let ticketCounts = 0;
+let totalFare = 0;
+
+//function
+
+function updateCounts() {
+  let selectedSeats = document.querySelectorAll(".row .selected");
+  ticketCounts = selectedSeats.length;
+  // console.log(ticketCounts);
+  totalFare = ticketCounts * ticketPrice;
+  total.innerText = totalFare;
+  select.innerText = ticketCounts;
 }
 
+//events
 
-//EventListner
-movieEl.addEventListener('change',(e) => {
-    ticketPrice = Number(e.target.value);
-    updateCount();
+movie.addEventListener("change", (e) => {
+  // console.log(e);
+  ticketPrice = Number(e.target.value);
+  // console.log(ticketPrice);
+  updateCounts();
 });
-container.addEventListener("click", (e) => {
-    if ( e.target.classList.contains("seat") && !e.target.classList.contains("Occupied")) {
-        e.target.classList.toggle("selected");
-    }
-    updateCount();
-  });
-  
+for (let i = 0; i < seats.length; i++) {
+  const seatList = seats[i];
 
+  seatList.addEventListener("click", (e) => {
+    console.log(e.target);
+    if (e.target.classList.contains("seat")) {
+      e.target.classList.toggle("selected");
+      // console.log(e.target.classList.contains("selected"));
+      updateCounts();
+      // console.log(e.target.value);
+    } 
+  });
+}
